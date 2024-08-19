@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html id="pageTop">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Collusion Catch!</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div id="bodyContainer">
+            <header>
+                <a href="#pageTop"><img src="collusioncatch.png"></a>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="#comparisonSoftware">Comparison Software</a></li>
+                    <li><a href="#innerWorkings">How It Works</a></li>
+                    <li><a href="#referencesContainer">References</a></li>
+                </ul>
+            </nav>
+            <hr>
+            <h1 id="comparisonSoftware">Comparison Software</h1>
+            <p>Start by copying and pasting the documents you want to compare below!</p>
+            <div id="mainContainer">
+                <div class="inputContainer">
+                    <h3 class="inputTitles">Document A</h3>
+                    <textarea id="sentenceA"></textarea>
+                    <button class="reloadPreviousTextA" onclick="reloadPreviousText('A')">Reload Previous Text</button>
+                    <div class="countContainer" style="margin-left: 45.5px;">
+                        <strong>Total Words:</strong><p id="wordCountA">0</p>
+                    </div>
+                    <div class="countContainer">
+                        <strong>Total Characters:</strong><p id="charCountA">0</p>
+                    </div>
+                    <button class="clearButton" onclick="clearInput('sentenceA')">Clear</button>
+                </div>
+                <div class = "inputContainer">
+                    <h3 class="inputTitles">Document B</h3>
+                    <textarea id="sentenceB"></textarea>
+                    <button class="reloadPreviousTextB" onclick="reloadPreviousText('B')">Reload Previous Text</button>
+                    <div class = "countContainer" style="margin-left: 45.5px;">
+                        <strong>Total Words:</strong><p id="wordCountB">0</p>
+                    </div>
+                    <div class = "countContainer">
+                        <strong>Total Characters:</strong><p id="charCountB">0</p>
+                    </div> 
+                    <button class = "clearButton" onclick="clearInput('sentenceB')">Clear</button>
+                </div>
+            </div>  
+        </div>
+        <center><button id="compare" onclick="validateInput()">Compare!</button></center>
+        <center><button id ="clearAll" onclick="clearAllInput()">Clear All</button></center>
+        <div id="extraStatsContainerOuter">
+            <center><div id="extraStatsContainer">
+                <h2>Further Statistical Results</h2>
+                <div id="extraStatsContainerMain">
+                    <div class="extraStatsContainerSmall">
+                        <h3>Similarity Pie Chart</h3>
+                        <p>The following pie chart shows a graphical representation of the distribution of the total similarity.</p>
+                        <canvas id="myCanvas" height="300px"></canvas>
+                    </div>
+                    <div class="extraStatsContainerSmall">
+                        <h3>Frequency Table</h3>
+                        <p> The frequency table below shows the words and their appearances in each document.
+                        <table id="frequencyTable">
+                            <tr id="frequencyTableRowFirst">
+                                <td><strong>Word</strong></td>
+                                <td><strong>Document 1 Frequency</strong></td>
+                                <td><strong>Document 2 Frequency</strong></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <p id="concludingInference"></p>
+            </div></center>
+            <hr>
+            <div class="textContainer">
+                <h1 id="innerWorkings">How It Works</h1>
+                <p>How does it all work you may ask? How can we test the similarity of text with such key-point precision and accuracy? How can you trust us to provide a faithful comparison of these documents to be the jury of one of the most heinous crimes? 
+                    It all lies in the source code, and the mathematical calculations! Using a method known as "cosine similarity", we are able to determine the similarity of documents, regardless of their length and size! 
+                    Derived from the matematical marvel of trigonometry, developed by the Egyptians' early study of triangles in the 2nd millenium BC, the program treats each word in a document as its own vector component! 
+                    In doing so, we convert all the words into vector components and their frequency becomes the coefficient! Using the angle created from the resulting vectors, we are able to determine if their direction, where identical documents will create identical vectors! 
+                    Truly fascinating stuff!</p>
+            </div>
+            <hr>
+            <center>
+            <div id="referencesContainer">
+                <a href="#referencesContainer"><div class="referencesContainerHeading" onclick="displayReferences()"><h1>References</h1><span id = "referencesExpandIcon"><i class="fa fa-angle-down"></i></span></div></a>
+                    <div class="referencesContainerMain">
+                    <p>The following websites were used to create this program:</p>
+                    <ul>
+                        <li>
+                            MDN Web Docs. (n.d.). EventTarget.addEventListener(). [online] Available at: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener. [Accessed 8 May 2023]
+                        </li>
+                        <li>
+                            futurestud.io. (n.d.). Remove All Whitespace From a String in JavaScript. [online] Available at: https://futurestud.io/tutorials/remove-all-whitespace-from-a-string-in-javascript. [Accessed 12 May 2023]
+                        </li>
+                        <li>
+                            EDUCBA. (2020). Scrollbar in HTML Table | Learn How to Create a Scrollbar in Html Table? [online] Available at: https://www.educba.com/scrollbar-in-html-table/ [Accessed 20 May 2023].
+                        </li>
+                        <li>
+                            code-basics.com. (n.d.). Quotation marks | JavaScript. [online] Available at: https://code-basics.com/languages/javascript/lessons/quotes [Accessed 22 May 2023].
+                        </li>
+                        <li>
+                            www.w3docs.com. (n.d.). How to Check if User Has Scrolled to the Bottom of the Page. [online] Available at: https://www.w3docs.com/snippets/javascript/how-to-check-if-user-has-scrolled-to-the-bottom-of-the-page.html [Accessed 23 May 2023].
+                        </li>
+                    </ul>
+                    <p>Graphics Used In This Program:</p>
+                    <ul>
+                        <li>
+                            <a href="https://www.flaticon.com/free-icons/up" title="up icons">Up icons created by Freepik - Flaticon</a>
+                        </li>
+                        <li>
+                            <a href="https://www.flaticon.com/free-icons/search" title="search icons">Search icons created by Dimitry Miroliubov - Flaticon</a>
+                        </li>
+                        <li>
+                            <a href="https://www.flaticon.com/free-icons/up" title="up icons">Up icons created by Freepik - Flaticon</a>
+                        </li>
+                        <li>
+                            <a href="https://fontawesome.com/">Font Awesome by Dave Gandy - http://fontawesome.io</a>
+                        </li>
+                        <li>
+                            <a href="https://www.dafont.com/white-on-black.font">Heading font by imagex - DaFont</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </center>
+            <div id="scrollUpButton"><a href="#pageTop"><img src="uparrow.png"></a></div>
+        </div>        
+    </body>
+</html>

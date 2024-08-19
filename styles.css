@@ -1,0 +1,392 @@
+html {
+  scroll-behavior:smooth
+}
+
+h1 {
+  color: #eef4ed;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 20px 0;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #000;
+}
+
+h3 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+  color: white;
+}
+
+img {
+  width: 700px;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  color: #bde0fe;
+  background: linear-gradient(#003049, #000);
+}
+
+hr {
+  border: none;
+  background: #b5b5b5;
+  height: 1px;
+  margin: 30px 0;
+}
+
+/*-----------------------------------------------------------------------*/
+/*-------------------Word Comparison Section Styling---------------------*/
+/*-----------------------------------------------------------------------*/
+#mainContainer {
+  display: inline-flex;
+  flex-direction: row;
+  margin: 0 5%;
+}
+
+#compare {
+  width: 90%;
+  height: 70px;
+  display: block;
+  text-align: center;
+}
+
+.inputContainer {
+  width: 49%;
+  border-radius: 10px;
+  padding-top: 15px;
+  height: 550px;
+  margin: 10px 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row;
+  background-color: #003566;    
+  text-shadow: 2px 2px 4px #000000;
+  box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.inputContainer:hover {
+  transform: translateY(-10px);
+}
+
+.countContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+textarea {
+  height: 300px;
+  width: 85%;
+  resize: none;
+  padding: 7px 7px;
+  border-radius: 10px;
+  transition: background 0.5s;
+}
+
+textarea:hover {
+  background-color: #cee5f2;
+}
+
+/*-----------------------------------------------------------------------*/
+/*----------------------------Button Styling-----------------------------*/
+/*-----------------------------------------------------------------------*/
+button {
+  background: #d9dcd6;
+  color: black;
+  padding: 8px 30px;
+  margin: 10px 0;
+  border-radius: 10px;
+  transition: background 0.5s;
+  font-size: 15px;
+  font-weight:700;
+}
+
+button:hover {
+  background: #0477ad;
+  color:#eef4ed
+}
+
+.btn {
+  background: #575a5e;
+  color: #fff;
+  padding: 8px 30px;
+  margin: 10px 0;
+  border-radius: 10px;
+  transition: background 0.5s;
+  font-size: 15px;
+  font-weight:700;
+  width: 60%;
+}
+
+.btn:hover {
+  background: #48bfe3;
+}
+
+/*-----------------------------------------------------------------------*/
+/*-----------------------------Clear Buttons-----------------------------*/
+/*-----------------------------------------------------------------------*/
+.clearButton {
+  width: 40.4%;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 8px;
+}
+
+#clearAll {
+  width: 90%;
+  height: 50px;
+  margin-top: 5px;
+  margin-bottom: 90px;
+}
+
+/*-----------------------------------------------------------------------*/
+/*----------------------Results and Similarity Section-------------------*/
+/*-----------------------------------------------------------------------*/
+#result {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+#resultContainer {
+  border-radius: 10px;
+  overflow-wrap: break-word;
+  background-color: #d3d3d3;
+  margin: 10px 10px;
+  color: black;
+  box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+  height: 535px;
+  display: inline-flex;
+  flex-direction: column;
+  opacity: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#statsContainer {
+  font-size: 14px;
+  width: 95%;
+  overflow-wrap: break-word;
+  text-align: center;
+  padding: 15px 0;
+  padding-left: 5px;
+}
+
+#extraStatsContainerOuter {
+  padding-top: 20px;
+}
+
+#extraStatsContainer {
+  display: none;
+  width: 70%;
+  padding: 10px 10px;
+  color: black;
+  box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+  background-color: #d3d3d3;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#extraStatsContainerMain {
+  display: flex;
+}
+
+.extraStatsContainerSmall {
+  width: 45%;
+  border: 2px solid black;
+  overflow-wrap: break-word;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 3px;
+}
+
+.extraStatsContainerSmall h3 {
+  color: black;
+}
+
+#similarityContainer, #concludingInference {
+  font-size: 20px;
+  color: white;
+  padding: 10px 0;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+#similarityContainer {
+  height: 40px;
+  font-size: 30px;
+}
+
+#concludingInference {
+  border-radius: 10px;
+}
+
+#frequencyTable {
+  width: 100%;
+  height: 450px;
+  display: block;
+  overflow-x:auto;
+  overflow-y:auto;
+  border: 3px solid black;
+  table-layout: auto;
+}
+
+td {
+  width: 33.4%;
+}
+
+#frequencyTableRowFirst {
+  background-color: #575a5e;
+  color: white;
+}
+
+/*-----------------------------------------------------------------------*/
+/*------------------------Fixed Scroll-Up Button-------------------------*/
+/*-----------------------------------------------------------------------*/
+#scrollUpButton > a > img {
+  height: 60px;
+  width: 60px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+#scrollUpButton {
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+/*-----------------------------------------------------------------------*/
+/*---------------------Reload Previous Text Buttons----------------------*/
+/*-----------------------------------------------------------------------*/
+.reloadPreviousTextA, .reloadPreviousTextB {
+  margin-top: -50px;
+  margin-left: 385px;
+  font-size: 10px;
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+/*-----------------------------------------------------------------------*/
+/*--------------------------'How It Works' Container---------------------*/
+/*-----------------------------------------------------------------------*/
+.textContainer {
+  padding: 0px 100px;
+  padding-bottom: 10px;
+  text-align: left;
+}
+
+/*-----------------------------------------------------------------------*/
+/*--------------------------References Container-------------------------*/
+/*-----------------------------------------------------------------------*/
+#referencesContainer {
+  background-color: #b5b5b5;
+  height: 50px;
+  width: 90%;
+  font-size: 10px;
+  overflow: hidden;
+  border-radius: 30px;
+  border: 3px solid black;
+  text-align: left;
+}
+
+.referencesContainerHeading {
+  display: flex;
+  width: 99.8%;
+  border-radius: 30px;
+  border: 2px solid #575a5e;
+}
+
+#referencesContainer > a > .referencesContainerHeading > h1 {
+  padding: 0px;
+  color: black;
+  text-align: left;
+  flex: 1;
+  margin-left: 20px;
+}
+
+#referencesContainer > a > .referencesContainerHeading > span {
+  padding-top: 0px;
+  text-align: right;
+  color: black;
+  font-size: 40px;
+  margin-right: 20px;
+}
+
+.referencesContainerMain {
+  padding: 0 50px;
+  font-size: 15px;
+  color: black;
+}
+
+/*-----------------------------------------------------------------------*/
+/*------- Navigation Bar (Not Created by Me, Sourced Externally) --------*/
+/*-----------------------------------------------------------------------*/
+nav ul {
+  display: inline-block;
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 40px;
+  padding: 7px 0;
+  position: relative;
+}
+
+nav ul > li > a {
+  padding: 10px;
+  color: #5c677d;
+  font-weight: 700;
+  text-shadow: none;
+  transition: color 0.3s;
+  font-size: 20px;
+}
+
+nav ul li a:before, nav ul li a:after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #ebebeb;
+  content: '';
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  transform: translateY(-10px);
+}
+
+nav ul li a:before {
+  top: 0;
+  transform: translateY(-10px);
+}
+
+nav ul li a:after {
+  bottom: 0;
+  transform: translateY(10px);
+}
+
+nav ul li a:hover, nav ul li a:focus {
+  color: #ebebeb;
+}
+
+nav ul li a:hover:before, nav ul li a:focus:before, nav ul li a:hover:after, nav ul li a:focus:after {
+  opacity: 1;
+  transform: translateY(0px);
+}
+/*-----------------------------------------------------------------------*/
